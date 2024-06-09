@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('../img/background.png') repeat;
+    overflow-y: hidden;
+    font-family: 'Engfont', sans-serif; 
+}
+
+@font-face {
+    font-family: 'Engfont';
+    src: url('../font/Engfont.ttf') format('truetype'); 
+}
+
+@font-face {
+    font-family: 'JapFont'; 
+    src: url('../font/JapFont.ttf') format('truetype');
+}
+
+.japanese-lyrics {
+    font-family: 'JapFont', sans-serif; 
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.record-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100vh;
+}
+
+.record {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #7a7e6f;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #696c5e;
+}
+
+button:focus {
+    outline: none;
+}
+
+.lyrics {
+    width: 50%;
+    font-size: 24px;
+    line-height: 1.5;
+    color: white;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    text-align: center;
+    max-height: 100vh;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.lyrics::-webkit-scrollbar {
+    display: none;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
